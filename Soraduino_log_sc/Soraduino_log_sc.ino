@@ -1,7 +1,8 @@
-#include "Wire.h"
-#include "I2Cdev.h"
-#include "MPU6050.h"
-#include "HMC5883L.h"
+#include <Wire.h>
+#include <I2Cdev.h>
+#include <MPU6050.h>
+#include <HMC5883L.h>
+#include <MS5611.h>
 #include <SD.h>
 
 #define FILENAME "datalog.txt"
@@ -15,6 +16,10 @@ int16_t gx,gy,gz;
 HMC5883L mag;
 int16_t mx, my, mz;
 
+//MS5611
+MS5611 ms;
+int32_t d1, d2;
+
 //SD card
 const int chipSelect = 4;
 File dataFile;
@@ -23,9 +28,10 @@ void setup(){
   //Init Pins
   pinMode(SS, OUTPUT);
   Serial.println(F("Initialize Pins"));
+  delay(100);
   
   //Init Serial Port
-  Serial.begin(9600);
+  Serial.begin(38400);
   Serial.println(F("Initialize Start"));
   
   //Init Wire
@@ -36,11 +42,17 @@ void setup(){
   mpu.initialize();
   Serial.println(F("Initialize MPU6050"));
   Serial.println(mpu.testConnection() ? "MPU6050 connection successful" : "MPU6050 connection failed");
+  delay(100);
   
   //Init HMC5883L
   mag.initialize();
-  Serial.println(F("Initialize HMc5883L"));
+  Serial.println(F("Initialize HMC5883L"));
   Serial.println(mag.testConnection() ? "HMC5883L connection successful" : "HMC5883L connection failed");
+  
+  //Init MS5611
+  ms.initialize();
+  Serial.println(F("Initialize MS5611"));
+  //Serial.println(ms.testConnection() ? "MS5611 connection successful" : "MS5611 connection failed");
   
   //Init SD Library
   if(!SD.begin(chipSelect)){
@@ -67,9 +79,11 @@ void loop(){
   mag.getHeading(&mx, &my, &mz);
   
   dataFile.println(ax);
+  Serial.print(mx);
+  Serial.print(",");
   Serial.println(ax);
   
-  delay(1000);
+  delay(100);
 }
 
 void close(){
