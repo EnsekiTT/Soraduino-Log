@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7497,17 +7497,9 @@ DM3AT-SF-PEJ</description>
 <net name="N$8" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="ANALOG_4"/>
-<pinref part="11DOF" gate="1" pin="1"/>
-<wire x1="91.44" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="71.12" x2="116.84" y2="99.06" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="ANALOG_5"/>
+<wire x1="91.44" y1="71.12" x2="119.38" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="11DOF" gate="1" pin="2"/>
-<wire x1="91.44" y1="68.58" x2="119.38" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="68.58" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="71.12" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -7691,12 +7683,17 @@ DM3AT-SF-PEJ</description>
 <junction x="99.06" y="22.86"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="IC1" gate="1" pin="ANALOG_5"/>
+<pinref part="11DOF" gate="1" pin="1"/>
+<wire x1="91.44" y1="68.58" x2="116.84" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="68.58" x2="116.84" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="115,1,-5.08,63.5,X1,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 </eagle>

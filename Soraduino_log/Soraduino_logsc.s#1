@@ -7201,7 +7201,7 @@ DM3AT-SF-PEJ</description>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C2012" value="0.1u"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="JP1" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="G-PW-V" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="VIN1" library="supply" deviceset="VCC" device="" value="VIN"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="U$9" library="supply" deviceset="+5V" device=""/>
@@ -7256,7 +7256,7 @@ DM3AT-SF-PEJ</description>
 <instance part="GND10" gate="1" x="81.28" y="101.6"/>
 <instance part="C9" gate="G$1" x="71.12" y="147.32"/>
 <instance part="GND11" gate="1" x="71.12" y="137.16"/>
-<instance part="JP1" gate="G$1" x="-55.88" y="144.78" rot="R90"/>
+<instance part="G-PW-V" gate="G$1" x="-55.88" y="144.78" rot="R90"/>
 <instance part="VIN1" gate="G$1" x="-48.26" y="149.86"/>
 <instance part="GND12" gate="1" x="-58.42" y="127"/>
 <instance part="U$9" gate="G$1" x="58.42" y="147.32"/>
@@ -7377,7 +7377,7 @@ DM3AT-SF-PEJ</description>
 <wire x1="71.12" y1="142.24" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="G-PW-V" gate="G$1" pin="1"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="-58.42" y1="142.24" x2="-58.42" y2="129.54" width="0.1524" layer="91"/>
 </segment>
@@ -7443,7 +7443,7 @@ DM3AT-SF-PEJ</description>
 <junction x="20.32" y="139.7"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="G-PW-V" gate="G$1" pin="2"/>
 <wire x1="-55.88" y1="142.24" x2="-55.88" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="VIN1" gate="G$1" pin="VCC"/>
 <wire x1="-55.88" y1="134.62" x2="-48.26" y2="134.62" width="0.1524" layer="91"/>
